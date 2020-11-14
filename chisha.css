@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400@family=Rubik:wght@300;400&display=swap');
+
 body{
-background-color: aqua;
+background-color: #FBDA61;
+background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+background-size: 300% 300%;
+animation: gradient 2s linear infinite alternate;
+height: 100vh;
+display: flex;
+justify-content: left;
+font-family: Open Sans, sans-serif;
+font-size: larger;
+writing-mode: horizontal-rl;
+display: block;
+}
+
+@keyframes gradient {
+  0%  {
+    background-position: 0%;    
+    }
+  100% {
+    background-position: 100%;  
+  }
+}
+
+h1 {
+    color: white;
+    font-family: Open Sans, sans-serif;
+    font-weight: 200;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-weight: 200
+    font-size: 5rem;
+    letter-spacing: 0.25rem;
+    text-align: center;
 }
