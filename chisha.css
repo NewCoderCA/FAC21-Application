@@ -54,35 +54,35 @@ h3 {
 }
 
 .active[data-tab-content] {
-  display: block;
+  display: block;        /* element displayed as a block fills screen*/
 }
 
-body { /* border line will appear on whole page*/
+body {   /* border line will fill whole screen horizontally*/
   padding: 0;
   margin: 0;
 }
 
-.tabs { 
+.tabs {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   margin: 0;
   padding: 0;
   border-bottom: 4px solid black;
-  font-weight: 600;
+  font-weight: 600px;
 }
 
-.tab { 
- cursor: pointer;
- padding: 10px;
+.tab {
+  cursor: pointer;
+  padding: 10px;
 }
 
 .tab.active {
-  background-color: white;
+  background-color: rgb(206, 139, 233);
 }
 
 .tab:hover {
-  background-color: rgb(233, 162, 215);
+  background-color: white;
 }
 
 .tab-content {
