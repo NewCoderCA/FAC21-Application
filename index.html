@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./chisha.css" />
-    
+    <link rel="stylesheet" href="style.css" />
+    <!--Inserting arrows image from website for carousel container to css-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+
 
     <title>Chisha Website!</title>
 </head>
@@ -13,16 +16,17 @@
 <!--IT WORKS Creating Tabs from unordered list-->
 
 <ul class="tabs">
-    <li data-tab-target="#home" class="active tab">Home</li>
+    <li data-tab-target="#home" class="active tab">Home</li> <!--data-tag-target is used as selector that grabs the specific div id related to it that will show when tab clicked-->
     <li data-tab-target="#about" class="tab">About</li>
     <li data-tab-target="#summary" class="tab">Summary</li>
   </ul>
-  <!-- Creating tab content divs, headers and paragraphs from Tabs unordered list-->
+  <!-- Creating tab content inside main div (<div class=></div> Include headers, divs, paragraphs from Tabs unordered list-->
   <div class="tab-content">
     <div id="home" data-tab-content class="active">
       <h1>CHISHA</h1>
       <p></p>
       <h3>Welcome  Enjoy  Stay  Return</h3>
+      <p></p>
       <p>This is .......</p>
       <main>On this journey they ask why should you be chosen. Well I say why not!
       <p>I am a Black female, Black mother, Black sister, Black wife, cousin, aunt and lover. Black friend, team member, work colleague, team player and co-worker. I am a Black coder, Black learner, aspiring techy developer and problem solver. I am a Black female communicator, collaborator, excited to create new ideas and see them come to life. I am a Black female who likes to laugh and giggle but mostly enjoys the sun. Because of all I am, I say why not choose me.</p></main>
@@ -31,9 +35,48 @@
       <h1>CHISHA</h1>
       <p></p>
       <h3>Welcome  Enjoy  Stay  Return</h3>
+      <p></p>
       <p>This is ..........</p>
-      <main>I also enjoy travelling so on this journey I would really welcome some new suggestions on the next stop of this adventure. Aspiring beautiful beaches already visited so try not to include them again. I am pleased to welcome you. With excitement you will enjoy your time here. Take a break relax, stay and hopefully you will return back. I am excited to create new ideas and see them come to life. Follow me on this journey and see if you enjoy the ride.</main>
+      <body>
+        <main>I also enjoy travelling so on this journey I would really welcome some new suggestions on the next stop of this adventure. Aspiring beautiful beaches already visited so try not to include them again. I am pleased to welcome you. With excitement you will enjoy your time here. Take a break relax, stay and hopefully you will return back. I am excited to create new ideas and see them come to life. Follow me on this journey and see if you enjoy the ride. </main>
+      <p></p>
+      
+        <!--Creating image carousel container for .slides and sourcing img for image slide inside-->
+        <div class="container">
+          <div class="slides">
+            <div class="slide">
+                 <img src="ImagesApplication/slide1.jpeg" alt="aruba">
+                 </div>
+              <div  class="slide">
+                 <img src="ImagesApplication/slide2.jpeg" alt="borabora">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide3.jpeg" alt="tahiti">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide4.jpeg" alt="cuba">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide5.jpeg" alt="capeverde">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide6.jpeg" alt="gambia">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide7.jpeg" alt="mexico">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide8.jpeg" alt="stlucia">
+                 </div>
+              <div class="slide">
+                 <img src="ImagesApplication/slide9.jpeg" alt="thailand">
+                 </div>
+             </div>
+           </div>
+        </div>
+    </body> 
     </div>
+    
     <div id="summary" data-tab-content>
       <h1>CHISHA</h1>
       <p></p>
