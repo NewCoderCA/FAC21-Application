@@ -17,81 +17,25 @@ tabs.forEach(tab => {                                                 //ForEach 
 })
 
 
-//Image carousel containing slides
-const slideContainer = document.querySelector('.container');
-const slide = document.querySelector('.slides');
-const nextBtn = document.getElementById('next-btn');
-const prevBtn = document.getElementById('prev-btn');
-const interval = 3000;                                           //Slide timer speed can be changed here without affecting startSlide function
+//Image carousel and slides function 
+var slideIndex = 0;
+showSlides();
 
-let slides = document.querySelectorAll('.slide');
-let index = 1;
-let slideId;
-
-const firstClone = slides[0].cloneNode(true);                    //Inbuilt JS method to clone a html element - 1st image
-const lastClone = slides[slides.length - 1].cloneNode(true);     //Inbuilt JS method to clone a html element - last image
-
-firstClone.id = 'first-clone'                                    //Giving clones an ID tag
-lastClone.id = 'last-clone'
-
-slide.append(firstClone);                                        //1st clone go to end
-slide.prepend(lastClone);                                        //Last clone go to start
-
-const slideWidth = slides[index].clientWidth;                    //Inner width mm of the slide
-slide.style.transform = `translateX(${-slideWidth * index}pxn)`; //Transform and rearrange slide. Move image so it covers whole size
-
-
-const startSlide = () => { //Transform and slide over next slide AUTOMATICALLY
-                                                                // setInterval(() => {
-                                                                //index++;
-                                                                // slide.style.transform = `translateX(${-slidewidth * index}px)`;
-                                                                //slide.style.transition = '.7s';
-                                                                //}, interval);
-  slideId = setInterval(() => {  
-  moveToNextSlide();
-  }, interval);
-  };
-    
-
-const getSlides = () => document.querySelectorAll('.slide');   //Variable created to grab all slides   
-
-slide.addEventListener('transitionend', () => {
-      slides = getSlides();
-  if (slides[index].id === firstClone.id){
-      slide.style.transition = 'none';
-      index = 1;
-      slide.style.transform = `translateX(${-slideWidth * index}pxn)`;
-    }
-  if (slides[index].id === lastClone.id){
-      slide.style.transition = 'none';
-      index = slides.length - 2;                                //Subtract 2 from last slide to get original cloned
-      slide.style.transform = `translateX(${-slideWidth * index}pxn)`;
-    }
-});
-
-const moveToNextSlide = () => {
-     slides = getSlides();
-     if (index >= slides.length - 1) return;
-     index++;
-     slide.style.transform = `translateX(${-slideWidth * index}pxn)`;
-     slide.style.transition = '.7s';
+// Next/previous arrow controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-const moveToPreviousSlide = () => {
-    if(index <= 0) return;
-    index--;
-    slide.style.transform = `translateX(${-slideWidth * index}pxn)`;
-    slide.style.transition = '.7s';
+//Automatic slideshow
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-
-
-slideContainer.addEventListener('mouseenter', () => {
-     clearInterval(slideId);
-});
-
-slideContainer.addEventListener('mouseleave', startSlide);
-
-nextBtn.addEventListener('click', moveToNextSlide);
-prevBtn.addEventListener('click', moveToPreviousSlide);
-
-startSlide();
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+ 
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 6000);  // Change image every 6 seconds
+}

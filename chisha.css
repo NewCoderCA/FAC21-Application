@@ -30,6 +30,7 @@ h1 {
     font-size: 6rem;
     letter-spacing: 1rem;
     text-align: center;
+    padding: 20px;
 }
 
 h2 {
@@ -58,7 +59,7 @@ h3 {
 }
 
 body {                  /* border line will fill whole screen horizontally*/
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 
@@ -90,56 +91,46 @@ body {                  /* border line will fill whole screen horizontally*/
   margin-right: 20px;
 }
 
-/*image carousel container styles */
-*{                         /*selects entire image carousel container to size with no borders */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/*IMAGE CAROUSEL container styles */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  max-height: 400px;
+  position: relative;
+  margin: auto;
+  border: solid 3px white;
 }
 
-.container {
- margin: 0 auto;           /* auto fit box size for the slide images to center */
- width: 500px;
- height: 300px;
- position: relative;
- overflow: hidden;
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
 
-.slides {
-  display: flex;
-  height: 100%;
-}
-
-.slide {
-  min-width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-}
-
-.slide-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%); /* makes arrows perfectly centered from top ontop of imagebox */
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#next-btn, #prev-btn {
+/* Previous Next buttons */
+#prev, #next {
   cursor: pointer;
-  background: transparent;
-  font-size: 30px;
-  border: none;
-  padding: 10px;
-  color: white;
-
+  position: center;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 0px 3px 3px 0px;
+  user-select: none;
 }
 
-#next-btn:focus, #prev-btn:focus {
-  outline: none;
+/* Position the "next button" */
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
+
+/* On hover of buttons, add transparency background color */
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+} 
+
