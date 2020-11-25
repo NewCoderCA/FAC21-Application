@@ -22,9 +22,22 @@ var slideIndex = 0;
 showSlides();
 
 // Next/previous arrow controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function prev() {
+  var i;
+  var slides =  document.getElementsByClassName("mySlides");
+  if (i <= 0) i = slides.length;
+  i--;
+  return slides;
 }
+
+function next() {
+  var i;
+  var slides =  document.getElementsByClassName("mySlides");
+  if (i >= slides.length) i = -1;
+  i++;
+  return slides;
+}
+
 
 //Automatic slideshow
 function showSlides() {
