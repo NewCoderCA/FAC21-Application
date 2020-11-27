@@ -13,7 +13,6 @@
 <body>
 
 <!--Creating Tabs from unordered list-->
-
 <ul class="tabs">
     <li data-tab-target="#home" class="active tab">Home</li> <!--data-tag-target is used as selector that grabs the specific div id related to it that will show when tab clicked-->
     <li data-tab-target="#about" class="tab">About</li>
@@ -33,19 +32,16 @@
       <h1>CHISHA</h1>
       <p></p>
       <h2>Welcome  Enjoy  Stay  Return</h2>
-      <p></p>
-      <p>This is ..........</p>
+      <div class="div1">
+        <p>I also enjoy travelling so on this journey I would really welcome some new suggestions on the next stop of this adventure. Aspiring beautiful beaches already visited so try not to include them again. I am pleased to welcome you. With excitement you will enjoy your time here. Take a break relax, stay and hopefully you will return back. I am excited to create new ideas and see them come to life. Follow me on this journey and see if you enjoy the ride.</p>
+      </div>
       <body>
-        <main>I also enjoy travelling so on this journey I would really welcome some new suggestions on the next stop of this adventure. Aspiring beautiful beaches already visited so try not to include them again. I am pleased to welcome you. With excitement you will enjoy your time here. Take a break relax, stay and hopefully you will return back. I am excited to create new ideas and see them come to life. Follow me on this journey and see if you enjoy the ride. </main>
-      <p></p>
-      <p></p>
       <p></p>
       
-<!--Creating image carousel container. Sourcing slide images. Setting slide width/height-->
-        
+<!--Creating image carousel container. Sourcing slide images. Setting slide width/height-->       
 <!-- Slideshow container -->
 <div class="slideshow-container">
-
+  
 <!-- Images -->
    <div class="mySlides"> 
      <img src="ImagesApplication/slide1.jpeg">
@@ -84,8 +80,9 @@
    </div>
  
 <!-- Next and previous buttons -->
+<button class="pause" id="pause">Pause</button>
 
-   <div class="slide-controls">
+   <div class="slideControls">
      <button id="prev" onclick="plusSlides(-1)">
        <i class="fas fa-chevron-left"></i>
      </button>
@@ -93,9 +90,7 @@
       <i class="fas fa-chevron-right"></i>
     </button>
    </div>
-
 </div>
-
 <p></p>
 
          

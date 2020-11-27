@@ -109,33 +109,55 @@ body {
 }
 
 /* Position of buttons middle edge of slideshow container*/
-.slide-controls {
+.slideControls {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-/* Style color each button" */
-#prev, #next {
+
+#prev {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 3%;
+  font-size: 25px;
+  color: white;
+  opacity: 0.8;
   cursor: pointer;
   background: transparent;
-  font-size: 20px;
   border: none;
-  padding: 10px;
-  color: white;
 }
+#next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 3%;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+
 /* Outline style of button removed */
 #prev:focus, #next:focus {
   outline: none;
+  border: none;
 }
 
 /* Hover buttons transparency background color */
 #prev:hover, #next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
+  color: white;
 } 
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  #prev, #next {font-size: 11px}
+}
+
 

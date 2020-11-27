@@ -17,27 +17,10 @@ tabs.forEach(tab => {                                                 //ForEach 
 })
 
 
+
 //Image carousel and slides function 
 var slideIndex = 0;
-showSlides();
-
-// Next/previous arrow controls
-function prev() {
-  var i;
-  var slides =  document.getElementsByClassName("mySlides");
-  if (i <= 0) i = slides.length;
-  i--;
-  return slides;
-}
-
-function next() {
-  var i;
-  var slides =  document.getElementsByClassName("mySlides");
-  if (i >= slides.length) i = -1;
-  i++;
-  return slides;
-}
-
+showSlides(slideIndex);
 
 //Automatic slideshow
 function showSlides() {
@@ -52,3 +35,72 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 6000);  // Change image every 6 seconds
 }
+
+
+//Next Previous Arrows slideshow
+showASlides(slideIndex);
+
+function plusSlides(n) {
+  showASlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showASlides(slideIndex = n);
+}
+function showASlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].className += " active";
+}
+
+
+
+
+//Pause Button function 
+// var playing = true;
+// var pauseButton = document.getElementById('pause');
+
+// function pauseSlideshow(){
+// 	pauseButton.innerHTML = 'Play';
+// 	playing = false;
+// 	clearInterval(slideInterval);
+// }
+
+// function playSlideshow(){
+
+//   if (playing === 'true'){
+//     slideIndex++;
+//   }
+// 	pauseButton.innerHTML = 'Pause';
+// 	playing = true;
+// 	slideInterval = setInterval(showSlides,6000);
+// }
+
+// pauseButton.onclick = function(){
+// 	if(playing){ pauseSlideshow(); }
+// 	else{ playSlideshow(); }
+// };
+
+// IS IT THIS PAUSE??
+// let interval;
+// function resumeSlides() {
+//   showSlides();
+// }
+// function pauseSlides() {
+//   clearInterval(interval);
+// }
+
+//OF IS IT THIS PAUSE??
+// mySlides.addEventListener("mouseenter", ()=>{
+//   clearInterval(showSlides, 6000);
+// });
+
+// mySlides.addEventListener("mouseleave", startSlide);
+
+
