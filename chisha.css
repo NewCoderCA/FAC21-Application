@@ -86,7 +86,6 @@ body {
 
 
 /*IMAGE CAROUSEL container styles */
-
 /* Slideshow container */
 .slideshow-container {
   width: auto;
@@ -117,7 +116,6 @@ body {
   display: flex;
 }
 
-
 #prev {
   position: absolute;
   top: 50%;
@@ -141,7 +139,6 @@ body {
   background: transparent;
   border: none;
 }
-
 
 /* Outline style of button removed */
 #prev:focus, #next:focus {

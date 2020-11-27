@@ -17,7 +17,6 @@ tabs.forEach(tab => {                                                 //ForEach 
 })
 
 
-
 //Image carousel and slides function 
 var slideIndex = 0;
 showSlides(slideIndex);
@@ -35,7 +34,6 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 6000);  // Change image every 6 seconds
 }
-
 
 //Next Previous Arrows slideshow
 showASlides(slideIndex);
@@ -60,47 +58,14 @@ function showASlides(n) {
 }
 
 
-
-
-//Pause Button function 
-// var playing = true;
-// var pauseButton = document.getElementById('pause');
-
-// function pauseSlideshow(){
-// 	pauseButton.innerHTML = 'Play';
-// 	playing = false;
-// 	clearInterval(slideInterval);
-// }
-
-// function playSlideshow(){
-
-//   if (playing === 'true'){
-//     slideIndex++;
-//   }
-// 	pauseButton.innerHTML = 'Pause';
-// 	playing = true;
-// 	slideInterval = setInterval(showSlides,6000);
-// }
-
-// pauseButton.onclick = function(){
-// 	if(playing){ pauseSlideshow(); }
-// 	else{ playSlideshow(); }
-// };
-
-// IS IT THIS PAUSE??
-// let interval;
-// function resumeSlides() {
-//   showSlides();
-// }
-// function pauseSlides() {
-//   clearInterval(interval);
-// }
-
-//OF IS IT THIS PAUSE??
-// mySlides.addEventListener("mouseenter", ()=>{
-//   clearInterval(showSlides, 6000);
-// });
-
-// mySlides.addEventListener("mouseleave", startSlide);
-
+//Destination Textbox for user input 
+var inputElement = document.getElementById("beach");
+    inputElement.addEventListener("change", function(){
+var textLength = inputElement.value.length;
+  if(textLength > 5) {  
+inputElement.style.borderColor = "#FF00FF";  //fusia Hexcode
+} else {
+inputElement.style.borderColor = "#00FF00"; //green Hexcode
+}
+})
 
