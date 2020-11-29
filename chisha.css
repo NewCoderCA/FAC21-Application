@@ -158,3 +158,10 @@ body {
 }
 
 
+/*Adjust textbox - input text element can grow*/
+#changeText input {
+  flex: 1; /* unlimited text space for text to grow and fill box */
+  border: solid;
+}
+
+
