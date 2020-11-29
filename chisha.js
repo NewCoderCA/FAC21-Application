@@ -35,7 +35,7 @@ function showSlides() {
   setTimeout(showSlides, 6000);  // Change image every 6 seconds
 }
 
-//Next Previous Arrows slideshow
+//Next Previous arrows slideshow
 showASlides(slideIndex);
 
 function plusSlides(n) {
@@ -59,13 +59,27 @@ function showASlides(n) {
 
 
 //Destination Textbox for user input 
-var inputElement = document.getElementById("beach");
+var inputElement = document.getElementById("username");
     inputElement.addEventListener("change", function(){
 var textLength = inputElement.value.length;
   if(textLength > 5) {  
-inputElement.style.borderColor = "#FF00FF";  //fusia Hexcode
+inputElement.style.borderColor = "#FF0000";  //red
 } else {
-inputElement.style.borderColor = "#00FF00"; //green Hexcode
+inputElement.style.borderColor = "#00FF00"; //green
 }
 })
+
+
+//Mouseover change text color
+const divs = document.querySelectorAll('.textColor');
+divs.forEach(function (div) {
+div.addEventListener("mouseover", function() {
+   div.style.color = 'white'})
+});
+
+//OR IS IT THIS PAUSE??
+// mySlides.addEventListener("mouseenter", ()=>{
+//   clearInterval(showASlides, 6000);
+// });
+// mySlides.addEventListener("mouseleave", showASlides);
 

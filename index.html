@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
 <!--Creating fontsawesome external website for linking right/left arrows-->
     <script src="https://kit.fontawesome.com/58d6d0819a.js" crossorigin="anonymous"></script>
-
     <title>Chisha Website!</title>
 </head>
 <body>
@@ -17,32 +16,60 @@
     <li data-tab-target="#about" class="tab">About</li>
     <li data-tab-target="#summary" class="tab">Summary</li>
   </ul>
-<!--Tab 1. Tab content includes headers, divs, paragraphs-->
+
+  <!--Tab 1. Tab content includes headers, divs, paragraphs-->
   <div class="tab-content">
     <div id="home" data-tab-content class="active">
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
-      <main>On this is journey to join Founders and Coders, they ask why should you be chosen. Well I say why not!
+      <main>On this is journey to join Founders and Coders, they ask why should you be chosen. 
+ 
+        <!-- Change text color on mouseover-->     
+        <section id="changeTextColor">
+          <div class="textColor">
+        <br>Well I say why not Me? 
+          </div>
+        </section>
       <p>I am a Black female, Black mother, Black sister, wife, cousin, aunt and lover. Black friend, team member, work colleague, team player and co-worker. I am a Black coder, leader, Black learner, aspiring techy developer and problem solver. I am a Black female communicator, collaborator, excited to create new ideas and see them come to life. I am a Black female who likes to laugh and giggle but mostly enjoys the sun who comes with a diverse perspective and likes to get things done. Because of all I am, I say why not choose me.</p>
-      <br>Why not Founders and Coders? They are.... 
+      <section id="changeTextColor">
+        <div class="textColor">
+      <br>Why not Founders and Coders? 
+        </div>
+      </section> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates.</p> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates.</p> 
+        </div>
+      </section>
+
      </main>
-    </div>
-<!--Tab 2. Tab content includes headers, divs, paragraphs-->
+  </div>
+</div>
+
+    <!--Tab 2. Tab content includes headers, divs, paragraphs-->
    <div id="about" data-tab-content>
       <h1>CHISHA</h1> 
       <h2>Welcome  Enjoy  Stay  Return</h2>
-        <p>I also enjoy travelling especially to beautiful beaches, where I can take a break, relax, stay and hopefully return. So on this journey because we promote collaboration and want you to also relax and enjoy your time on this website, I would really welcome some suggestions on where the next destination of this adventure should be.</p>
-<!--Destination textbox for user input-->
-        <label for="username">Enter your country: </label>
-        <input type="text" id="beach" value=" Destination"/>
-      <div class="div1">
-      </div>
-      <p>Perhaps you will guess which countries do these beautiful beaches belong to.</p>
-      <body>
-     
+        <p>I also enjoy travelling especially to beautiful beaches, where I can take a break, relax, stay and hopefully return. 
+        <br>So on this journey because we promote collaboration and want you to also relax and enjoy your time on this website, I would really welcome some suggestions on where the next destination of this adventure should be.</p>
+        <p> Holidays are all about rest, relaxation and indulging in pure bliss. So while you are here, join in and participate. That rejuvenated mood afterwards may allow you to return!</p>
+
+        <!--Destination textbox for user input-->
+        <section id="changeTextbox">
+          <label for="username">Enter your destination: </label>
+          <input type="text" id="username" value="user"/>
+          <p>Perhaps you can guess which countries these beautiful beaches belong to.</p>
+        </section> 
       
-<!--Creating mage carousel container. Sourcing slide images-->       
-<!-- Slideshow container -->
+      <div class="div1"></div> <!--Ensures image carousel appears on Tab 2 only-->
+      
+         
+<!--Creating image carousel container. Slideshow Container-->       
 <div class="slideshow-container">
 
 <!-- Images -->
@@ -83,7 +110,7 @@
    </div>
 
 <!-- Pause button -->
-<button class="pause" id="pause">Pause</button>
+<button class="controls" id="pause">Pause</button>
 <!-- Next and previous buttons -->
    <div class="slideControls">
      <button id="prev" onclick="plusSlides(-1)">
@@ -95,7 +122,9 @@
    </div>  
 </div>
 <p></p>
-      
+    
+</div> 
+
 <!-- Tab 3--> 
     <div id="summary" data-tab-content>
       <h1>CHISHA</h1>
@@ -103,10 +132,10 @@
       <p>This is.......</p>
       <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex soluta pariatur ipsum nobis, quos debitis obcaecati sit dignissimos quibusdam commodi aspernatur at totam! Perferendis nobis, harum veniam aut molestiae ratione.</main>
     </div>
-  </div>
-  <p></p>
-  </div>
   
+  <p></p>
+
+  </div>
 <script src="./chisha.js"></script>
 </body>
 </html>
