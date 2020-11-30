@@ -162,6 +162,40 @@ body {
 #changeText input {
   flex: 1; /* unlimited text space for text to grow and fill box */
   border: solid;
+  padding-right: 20px;
+  justify-content: space-between;
+ 
 }
 
+/*Targets divclass columnLayout outside container using flexbox to make columns across screen*/
+.columnLayout {
+  display: flex;
+  
+}
+/* Flexbox style to ensure all columns are same width size as siblings*/
+.mainColumn {
+  flex: 1;
+  flex-basis: 30%; /* evenly shares columns width evenly with space between */
+  border: solid transparent;
+  margin: 15px;
+}
 
+.twoColumn {
+  flex: 1;
+  flex-basis: 30%;
+  border: solid transparent;
+  margin: 15px;
+}
+
+.threeColumn {
+  flex: 1;
+  flex-basis: 30%;
+  border: solid transparent;
+  margin: 15px;
+}
+
+@media (min-width: 700px)  /* if using mobile/ small screen stack columns ontop to fill space */
+#changeText {
+display-flex;
+justify-content: space-between;
+}
