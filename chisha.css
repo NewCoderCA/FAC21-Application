@@ -169,13 +169,13 @@ body {
 
 /*Targets divclass columnLayout outside container using flexbox to make columns across screen*/
 .columnLayout {
-  display: flex;
+  display: flex; /* Flexbox style to center text */
   
 }
 /* Flexbox style to ensure all columns are same width size as siblings*/
 .mainColumn {
   flex: 1;
-  flex-basis: 30%; /* evenly shares columns width evenly with space between */
+  flex-basis: 30%; /* Flexbox shares equal columns widths 10% leftover fills space between margins */
   border: solid transparent;
   margin: 15px;
 }
@@ -194,8 +194,43 @@ body {
   margin: 15px;
 }
 
-@media (min-width: 700px)  /* if using mobile/ small screen stack columns ontop to fill space */
+@media (min-width: 700px) { /* if using mobile/ small screen keeps as x3columns */
 #changeText {
 display-flex;
 justify-content: space-between;
+ }
 }
+
+
+.oneImage img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  margin: auto;
+  border-radius: 50px;
+ }
+
+ .twoImage img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  margin: auto;
+  border-radius: 50px;
+ }
+
+ .threeImage img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  margin: auto;
+  border-radius: 50px;
+ }

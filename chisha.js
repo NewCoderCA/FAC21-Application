@@ -35,6 +35,7 @@ function showSlides() {
   setTimeout(showSlides, 6000);  // Change image every 6 seconds
 }
 
+
 //Next Previous arrows slideshow
 showASlides(slideIndex);
 
@@ -58,6 +59,44 @@ function showASlides(n) {
 }
 
 
+//PAUSE PAUSE BUTTON ?? not working
+// var playing = true;
+// var pauseButton = document.getElementById('pause');
+// const setInterval = setTimeout(showSlides,2000); //new variable which autoplays slideshow
+
+// function pauseSlideshow(){
+// 	pauseButton.innerHTML = 'Play';
+// 	playing = false;
+//   clearInterval(setInterval);
+//   //alert("is pause working"); //CHECK ?? 
+// }
+
+// function playSlideshow(){
+// 	pauseButton.innerHTML = 'Pause';
+//   playing = true; //if pause button clicked slideshow stopped
+//   //!clearInterval(setInterval); //THIS WORKS WHY??
+//   setInterval(setTimeout()); //play slideshow again
+//   //alert("is play working"); //CHECK ??
+// }
+
+// pauseButton.onclick = function(){
+// 	if(playing){ pauseSlideshow(); } //if pausebutton is playing-ON-pause Slideshow
+// 	else{ playSlideshow(); }         //else pausebutton not playing-OFF-play Slideshow
+// };
+
+
+//PAUSE MOUSEOVER/ MOUSELEAVE ?? not working
+// document.getElementsByClassName("slideshow-container").addEventListener("mouseenter", mouseEnter);
+// document.getElementsByClassName("slideshow-container").addEventListener("mouseleave", mouseLeave);
+// function mouseEnter() {
+//   clearTimeout(setTimeout);
+// }
+// function mouseLeave() {
+//   setTimeout(showSlides, 6000);
+// }
+
+
+
 //Destination Textbox for user input 
 var inputElement = document.getElementById("username");
     inputElement.addEventListener("change", function(){
@@ -70,16 +109,39 @@ inputElement.style.borderColor = "#00FF00"; //green
 })
 
 
-//Mouseover change text color
+//Change Text-color
 const divs = document.querySelectorAll('.textColor');
 divs.forEach(function (div) {
 div.addEventListener("mouseover", function() {
    div.style.color = 'white'})
 });
 
-//OR IS IT THIS PAUSE??
-// mySlides.addEventListener("mouseenter", ()=>{
-//   clearInterval(showASlides, 6000);
-// });
-// mySlides.addEventListener("mouseleave", showASlides);
+
+// Change clickbox colour if answer correct 
+// function changeBackground() {
+// var correctText = document.getElementById("username");
+// var button = document.getElementById("blueButton"); 
+
+// var names = ["Bora Bora", "Aruba", "Cuba", "Varadero", "Mexico", "Cape Verde", "Sal",
+//             "Gambia", "Thailand", "Koh Samui", "Tahiti", "Saint Lucia", "St Lucia"];
+
+//    //if(correctText.indexOf("names")){ //TRY THIS VERSION OF
+//    if(correctText.value === "names"){
+//   button.style.backgroundColor = "blue";
+//    }
+//    alert("changeColor"); //CHECK ??
+// } 
+// button.addEventListener("click", button.style.backgroundColor = "blue");
+
+
+// Grab the element
+// var clickColor = document.querySelector("#blueButton");
+// var correctText = document.getElementById("username")
+// // Define the actions
+// function blueBackground(event) {
+// event.target.classList.toggle("blue");
+// if (correctText.innerHTML == "Cuba");
+// } 
+// // Listen for an event, and fire the function
+// blueButton.addEventListener("click", blueBackground)
 
