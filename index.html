@@ -27,7 +27,7 @@
         <!-- Change text color on mouseover-->     
         <section id="changeTextColor">
           <div class="textColor">
-        <br>Well I say why not Me? 
+        <br>Why not Me? 
           </div>
         </section>
       <p>I am a Black female, Black mother, Black sister, wife, cousin, aunt and lover. Black friend, team member, work colleague, team player and co-worker. I am a Black coder, leader, Black learner, aspiring techy developer and problem solver. I am a Black female communicator, collaborator, excited to create new ideas and see them come to life. I am a Black female who likes to laugh and giggle but mostly enjoys the sun who comes with a diverse perspective and likes to get things done. Because of all I am, I say why not choose me.</p>
@@ -56,23 +56,21 @@
       <h1>CHISHA</h1> 
       <h2>Welcome  Enjoy  Stay  Return</h2>
         <p>I also enjoy travelling especially to beautiful beaches, where I can take a break, relax, stay and hopefully return. 
-        <br>So on this journey because we promote collaboration and want you to also relax and enjoy your time on this website, I would really welcome some suggestions on where the next destination of this adventure should be.</p>
+        <br>So on this journey because we promote collaboration and partnership, I want you to relax and enjoy your time on this website. Sharing is caring and I would really welcome some suggestions on where the next destination of this adventure should be.</p>
         <p> Holidays are all about rest, relaxation and indulging in pure bliss. So while you are here, join in and participate. That rejuvenated mood afterwards may allow you to return!</p>
 
         <!--Destination textbox for user input-->
         <div class="changeTextbox">
           <section id="changeText">
-            <label for="username">Enter your destination: </label>
+            <label for="username">Enter your destination: </label> 
             <input type="text" id="username" value="country"/>
-            <p>Perhaps you can guess which countries these beautiful beaches belong to.</p>
-          </section>
-        </div>
-        <section id = "changeBackColor">
-          <p> Click me to see if you guessed the country or destination correctly. If you are correct I will change to the sea colour for you. Have a try but do not forget its case sensitive! </p>
-          <button id="blueButton"> Click me to check</button>
-        </section>
-       
-      
+        <br>Perhaps you can guess which countries these beautiful beaches belong to. 
+<!-- Blue button -->
+      <section id = "correctButtonColor">
+      <button id="blueButton"> Congratulations correct!</button>
+      </section> 
+      <p> Click me <b>once </b>to see if you guessed the country or destination correctly. If you are correct, I will change to the sea colour for you. If the sea does not come out <b>click me one more time</b> to clear and have another try. But do not forget its case sensitive! </p>
+       <p></p>
       <div class="div1"></div> <!--Ensures image carousel appears on Tab 2 only-->
       
          
@@ -117,14 +115,15 @@
    </div>
 
 <!-- Pause button -->
-<button class="controls" id="pause">Pause</button>
+<button class="controls" id="pause" onclick="pause()">Pause</button>
+<!--<button class="controls" id="play" onclick="play()">Play</button>-->
 
 <!-- Next and previous buttons -->
    <div class="slideControls">
-     <button id="prev" onclick="plusSlides(-1)">
+     <button id="prev">
        <i class="fas fa-chevron-left"></i>
      </button>
-     <button id="next" onclick="plusSlides(1)">
+     <button id="next">
       <i class="fas fa-chevron-right"></i>
     </button>   
    </div>  
@@ -138,12 +137,11 @@
     <div id="summary" data-tab-content>
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
-      <p>This part of the journey allows you to return back to the beginning where it all began. Please click on the icons to see where the start of the learning journey began.</p>
-  
+      <p>This part of the journey allows you to return back to the beginning platforms where it all began. Enjoy this section as we reminisce on the past features that take us to the start of the learning journey. Where it all began. Click on the icons underneath the features to be transported.</p>
       <div class="columnLayout">
         <div class="mainColumn">
-          <h3>Feature one</h3>
-          <p>Github
+          <h3 style="text-align:center">Feature Comprehend</h3>
+          <p style="text-align:center">Github</p>
           <div class="oneImage"> 
   <a href="https://github.com/NewCoderCA/FAC21-Application"><img id="myGithub" src="https://res.cloudinary.com/practicaldev/image/fetch/s--i_sb3chq--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/fk0849hvg2rt13bpqhjy.jpg" alt="github logo"></a>
           </div>
@@ -153,8 +151,8 @@
         </div>
 
         <div class="twoColumn">
-          <h3>Feature two</h3>
-          <p>Codewars
+          <h3 style="text-align:center">Feature Study</h3>
+          <p style="text-align:center">Codewars</p>
           <div class="twoImage"> 
   <a href="https://www.codewars.com/dashboard"><img id="myCodewars" src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" alt="codewars logo"></a>
           </div>
@@ -164,8 +162,8 @@
         </div>
 
         <div class="threeColumn">
-          <h3>Feature three</h3>
-          <p>Freecodecamp
+          <h3 style="text-align:center">Feature Learn</h3>
+          <p style="text-align:center">Freecodecamp</p>
           <div class="threeImage"> 
   <a href="https://www.freecodecamp.org/learn/?messages=success%5B0%5D%3DSuccess%2521%2520You%2520have%2520signed%2520in%2520to%2520your%2520account.%2520Happy%2520Coding%2521"><img id="myFreecodecamp" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="freecodecamp logo"></a>
           </div>
