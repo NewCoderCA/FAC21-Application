@@ -58,31 +58,31 @@ function startSlide(){                                     //Grab image[0] and s
 //Show Previous LEFT
 function slideLeft(){                        
   reset();
-  sliderImages[current - 1].style.display = 'block';      //Reset wipe clear, take current -1 then display -1 image 
-  current--;                                              //Decrement the image at index -1
+  sliderImages[current - 1].style.display = 'block';       //Reset wipe clear, take current -1 then display -1 image 
+  current--;                                               //Decrement the image at index -1
 }
 
 //Show Next RIGHT
 function slideRight(){                                   
-  reset();                                                //Rest wipe all images clear
-  sliderImages[current + 1].style.display = 'block';      //Show(block) image +1 and keep incrementing 
+  reset();                                                 //Rest wipe all images clear
+  sliderImages[current + 1].style.display = 'block';       //Show(block) image +1 and keep incrementing 
   current++;
 }
 
 //EVENT LISTENER click -LEFT
-left.addEventListener('click', function(){               //LEFT Listener for click on Prev button then fire LEFTfunction
-  if(current === 0){                                     //If current slide is [0] which it will be cause reset
-    current = sliderImages.length;                       //Set current to max slideLength (last image in collection) then -1
+left.addEventListener('click', function(){                 //LEFT Listener for click on Prev button then fire LEFTfunction
+  if(current === 0){                                       //If current slide is [0] which it will be cause reset
+    current = sliderImages.length;                         //Set current to max slideLength (last image in collection) then -1
   }
-  slideLeft();                                           //Fire the function slideLeft
+  slideLeft();                                             //Fire the function slideLeft
 });
 
 //EVENT LISTENER click -RIGHT
-right.addEventListener('click', function(){              //RIGHT Listener for click on Next button then fire RIGHTfunction
-  if(current === sliderImages.length - 1){               //If current slide is last image in collection
-    current = -1;                                        //Current is equal to 2nd from last image -1 slide index 
+right.addEventListener('click', function(){                //RIGHT Listener for click on Next button then fire RIGHTfunction
+  if(current === sliderImages.length - 1){                 //If current slide is last image in collection
+    current = -1;                                          //Current is equal to 2nd from last image -1 slide index 
   }
-  slideRight();                                          //Fire the function slideRight
+  slideRight();                                            //Fire the function slideRight
 });
 startSlide();
 
@@ -92,7 +92,7 @@ startSlide();
 
 // //PAUSE PLAY FUNCTIONS
 //   var timer = setInterval(showAllSlides, 3000);
-//   var pauseButton = document.getElementById("pause");   //Grab pause button
+//   var pauseButton = document.getElementById("pause");     //Grab pause button
 //   //var playButton = document.getElementsById("play");    //Grab play button
 //   let play = true;
 //   function pause(event){
@@ -133,15 +133,25 @@ div.addEventListener("mouseover", function() {
 
 
 // Change Clickbox background colour if correct answer 
-var correctText = document.getElementById("username");          //Grab textbox users answer will go
-var colorBtnChangeA = document.getElementById("blueButton");    //Grab button that will check/change colour
+var correctText = document.getElementById("username");                     //Grab textbox users answer will go
+var colorBtnChangeA = document.getElementById("blueButton");               //Grab button that will check/change colour
    
 var names = ["Bora Bora", "Aruba", "Cuba", "Varadero", "Mexico", "Cape Verde", "Sal",
             "Gambia", "Thailand", "Koh Samui", "Tahiti", "Saint Lucia", "St Lucia"];
 
-function changeCorrectColor(event) {                            //Listen for the event-actions-to-fire in addEventListener
-   if (names.indexOf(correctText.value) != -1) {                //If value in correctText IS (opposite of -1 not there) in NAMES then do something...
-   event.target.classList.toggle("blue");                       //Toggle over button color change to blue
+function changeCorrectColor(event) {                                        //Listen for the event-actions-to-fire in addEventListener
+   if (names.indexOf(correctText.value) != -1) {                            //If value in correctText IS (opposite of -1 not there) in NAMES then do something...
+   event.target.classList.toggle("blue");                                   //Toggle over button color change to blue
     } 
    } 
-colorBtnChangeA.addEventListener("click", changeCorrectColor);  //Button addEvenListen out for 'click' to fire above function
+colorBtnChangeA.addEventListener("click", changeCorrectColor);              //Button addEvenListen out for 'click' to fire above function
+
+
+//Count letters for longest spelling destination 
+const input = document.getElementById("longestCountry");                    //Grab textbox     
+let count = document.getElementById("character-count");                     //Grab chrCount element create new variable to pass through function
+input.addEventListener("input", updateValue);                               //Listen for text input fire function called updateValue
+
+function updateValue(){                                                     //Call function updateValue fire action
+count.textContent = input.value.length + ' characters';                     //Count text.length number & add to word characters
+}
