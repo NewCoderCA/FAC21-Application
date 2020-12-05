@@ -10,82 +10,79 @@
     <title>Chisha Website!</title>
 </head>
 <body>
-<!--Creating Tabs from unordered list-->
-<ul class="tabs">
-    <li data-tab-target="#home" class="active tab">Home</li> <!--data-tag-target is used as selector that grabs the specific div id related to it that will show when tab clicked-->
-    <li data-tab-target="#about" class="tab">About</li>
-    <li data-tab-target="#summary" class="tab">Summary</li>
-  </ul>
 
-  <!--Tab 1. Tab content includes headers, divs, paragraphs-->
+<!--Creating Navigation Bar to contain the Tabs from unordered list-->
+<div class="navbar">
+  <ul class="tabs">
+    <li><a data-tab-target="#home" class="active tab">Home</a></li> 
+    <li><a data-tab-target="#about" class="tab">About</a></li> 
+    <li><a data-tab-target="#summary" class="tab">Summary</a></li> 
+  </ul>
+</div>
+
+<!--Tab 1. Tab content includes headers, divs, paragraphs-->
   <div class="tab-content">
     <div id="home" data-tab-content class="active">
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
       <main>On this is journey to join Founders and Coders, they ask why should you be chosen. 
  
-        <!-- Change text color on mouseover-->     
-        <section id="changeTextColor">
-          <div class="textColor">
+<!-- Change text color on mouseover-->     
+    <section id="changeTextColor">
+      <div class="textColor">
         <br>Why not Me? 
-          </div>
-        </section>
-      <p>I am a Black female, Black mother, Black sister, wife, cousin, aunt and lover. Black friend, team member, work colleague, team player and co-worker. I am a Black coder, leader, Black learner, aspiring techy developer and problem solver. I am a Black female communicator, collaborator, excited to create new ideas and see them come to life. I am a Black female who likes to laugh and giggle but mostly enjoys the sun who comes with a diverse perspective and likes to get things done. Because of all I am, I say why not choose me.</p>
-      <section id="changeTextColor">
-        <div class="textColor">
-      <br>Why not Founders and Coders? 
-        </div>
-      </section> 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates.</p> 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates. 
-          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptates.</p> 
-        </div>
-      </section>
+      </div>
+    </section>
+      <p>I am a Black female, Black mother, Black sister, wife, cousin, aunt and lover. Black friend, team member, work colleague, team player and co-worker. I am a Black coder, leader, Black learner, aspiring techy developer and problem solver. I am a Black organiser, group worker, contributor and cooperator. I am a Black female who is intelligent, brave, inquisitive, asks questions and likes to rave. I am different, I like a challenge and I like to learn new things. I am a Black female communicator, collaborator, excited to create new ideas and see them come to life. I am a Black female who likes to laugh and giggle but mostly enjoys the sun who comes with a diverse perspective and likes to get things done. 
+      <br>Because of all I am, I say why not choose me.</p>
+    <section id="changeTextColor">
+      <div class="textColor">
+       <br>Why not Founders and Coders? 
+      </div>
+    </section> 
+       <p>Founders and Coders is not your ordinary coding bootcamp. They promote diversity with no judgement for the Tech industry. Founders and Coders are making a social impact with technology all over the world. Founders and Coders are on a mission to prove that for many people peer-led learning is the most effective and least expensive route into the tech industry. Cohorts thrive when teams represent a diversity of experiences and perspectives, providing many opportunities for people to learn new ways of thinking from each other. Founders and Coders course helps you learn HTML, CSS, JavaScript, Node.JS and other basic building blocks of web development, as well as user-centred design and entrepreneurship, via workshops and team projects based on ideas pitched within the cohort and for an external client. Founders and Coders teaches you to learn to code by pair programming with a partner, working on team projects, and from “near-peer” mentorship by recent graduates. Founders and Coders is a community founded on the principle of reciprocity. We expect all graduates to contribute back to the viability and development of the programme, starting by mentoring for at least one full week after they graduate. 
+        <br>Because of all Founders and Coders are, I say why not choose to learn with them.</p> 
+    </div>
+    </section>
 
-     </main>
+    </main>
   </div>
 </div>
 
-    <!--Tab 2. Tab content includes headers, divs, paragraphs-->
+<!--Tab 2. Tab content includes headers, divs, paragraphs-->
    <div id="about" data-tab-content>
       <h1>CHISHA</h1> 
        <h2>Welcome  Enjoy  Stay  Return</h2>
         <p>I also enjoy travelling especially to beautiful beaches, where I can take a break, relax, stay and hopefully return. 
         <br>So on this journey because we promote collaboration and want you to also relax and enjoy your time on this website. I would really welcome some collaborated suggestions on where the next destination of this adventure should be. Sharing is caring and would like to know your longest spelling favourite destination. Do not worry, I will count the letters for you.</p>
         
-  <!--Textbox for longest spelling country-->
+<!--Textbox for longest spelling country-->
   <div class="spellCountry">
     <label for="country">Insert your longest spelling destination.</label>
     <input type="text" id="longestCountry">
     <output id="character-count">0 characters</output>
-  <!--  ::after --> 
+<!--  ::after --> 
   </div>   
         
-        <p> Holidays are all about rest, relaxation and indulging in pure bliss. So while you are here, join in and participate. That rejuvenated mood afterwards may allow you to return!</p>
-        <!--Destination textbox for user input-->
-        <div class="changeTextbox">
-          <section id="changeText">
-            <label for="username">Enter your destination: </label>
-            <input type="text" id="username" value="country"/>
-            <p>Perhaps you can guess which countries these beautiful beaches belong to.</p>
-          </section>
-        </div>
+      <p>Holidays are all about rest, relaxation and indulging in pure bliss. So while you are here, join in and participate. That rejuvenated mood afterwards may allow you to return!
+      <br>Perhaps you can guess which countries these beautiful beaches belong to.</p>
+<!--Destination textbox for user input-->
+    <div class="changeTextbox">
+      <section id="changeText">
+         <label for="username">Match the correct destination: </label>
+          <input type="text" id="username" value="country"/>
+      </section>
+    </div>
 
-       <!-- Blue button answer correct -->
-      <section id = "correctButtonColor">
-        <button id="blueButton"> Congratulations correct!</button>
-        
-        <br> Click me <b>once </b>to see if you guessed the country or destination correctly. If you are correct, I will change to the sea colour for you. Then <b>click me one more time</b> to clear and have another try. See if you can guess them all right. But do not forget its case sensitive!
-        </section>
-       </section> 
-  <div class="div1"></div> <!--Ensures image carousel appears on Tab 2 only-->
-      
-         
+<!-- Blue button answer correct -->
+    <section id = "correctButtonColor">
+      <button id="blueButton"> Congratulations correct!</button>
+      <br> Click me <b>once </b>to see if you guessed the country or destination correctly. If you are correct, I will change to the sea colour for you. Then <b>click me one more time</b> to clear and have another try. See if you can guess them all right. But do not forget its case sensitive!
+      </section>
+    </section> 
+ 
+<div class="div1"></div> <!--Ensures image carousel appears on Tab 2 only-->
+              
 <!--Creating image carousel container. Slideshow Container-->       
 <div class="slideshow-container">
 
@@ -131,16 +128,15 @@
 <!--<button class="controls" id="play" onclick="play()">Play</button>-->
 
 <!-- Next and previous buttons -->
-   <div class="slideControls">
-     <button id="prev">
-       <i class="fas fa-chevron-left"></i>
-     </button>
-     <button id="next">
-      <i class="fas fa-chevron-right"></i>
-    </button>   
-   </div>  
+<div class="slideControls">
+  <button id="prev">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button id="next">
+    <i class="fas fa-chevron-right"></i>
+  </button>   
+ </div>  
 </div>
-<p></p>
     
 </div> 
 
