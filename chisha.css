@@ -48,12 +48,13 @@ body {margin:0;}
   overflow: hidden;
   background-color: #FBDA61;
   background-image: linear-gradient(65deg, #FBDA61 0%, #FF5ACD 50%, #00FFFF 110%); 
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: fixed;   /* Set the navbar to fixed position */
+  top: 0;           /* Position the navbar at the top of the page */
+  width: 100%;      /* Full Width*/
 }
 
-.navbar a {
+/* Links inside the navbar */
+.navbar a { /* <a> refers to the parent element of the hyperlink */
   float: left;
   display: block;
   color: #f2f2f2;
@@ -62,7 +63,7 @@ body {margin:0;}
   text-decoration: none;
   font-size: 20px;
 }
-
+/* Change background on mouse-over */
 .navbar a:hover {
   background: rgb(235, 233, 233);
   color: black;
@@ -72,11 +73,6 @@ body {margin:0;}
   padding: 16px;
   margin-top: 30px;
 }
-
-
-
-
-
 
 /* TABS */
 [data-tab-content] {
@@ -122,8 +118,7 @@ body {
 }
 
 
-/*IMAGE CAROUSEL container styles */
-/* Slideshow container */
+/*IMAGE CAROUSEL Slideshow container */
 .slideshow-container {
   width: auto;
   max-width: 600px;
@@ -132,7 +127,6 @@ body {
   margin: 0 auto;
   border: solid 3px white;
 }
-
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -143,7 +137,6 @@ body {
  width: 600px;
  height: 250px;
 }
-
 /* Position of buttons middle edge of slideshow container*/
 .slideControls {
   position: absolute;
@@ -165,6 +158,7 @@ body {
   background: transparent;
   border: none;
 }
+
 #next {
   position: absolute;
   top: 50%;
@@ -199,12 +193,11 @@ body {
 .blue{
   background: #00FFFF; 
   border-radius: 50px;
- 
 }
 
-/*Adjust textbox - input text element can grow*/
-#changeText input {
-  /* unlimited text space for text to grow and fill box */
+
+/*Textbox - input text element can grow*/
+#changeText input { /* unlimited text space for text to grow and fill box */
   border: 2px solid;
   border-radius: 50px;
   padding-right: 20px;
@@ -218,11 +211,9 @@ body {
 }
 
 
-
 /*Targets divclass columnLayout outside container using flexbox to make columns across screen*/
 .columnLayout {
-  display: flex; /* Flexbox style to center text */
-  
+  display: flex; /* Flexbox style to center text */ 
 }
 /* Flexbox style to ensure all columns are same width size as siblings*/
 .mainColumn {
@@ -253,7 +244,7 @@ justify-content: space-between;
  }
 }
 
-
+/* Column Images */
 .oneImage img {
   width: 150px;
   height: 150px;
@@ -292,3 +283,4 @@ justify-content: space-between;
      width: 100%;
    }
  }
+

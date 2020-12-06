@@ -176,3 +176,30 @@ input.addEventListener("input", updateValue);                            //Liste
 function updateValue(){                                                  //Call function updateValue fire action
 count.textContent = input.value.length + ' characters';                  //Count text.length number & add to word characters
 }
+
+
+
+//Timer Countdown Function
+function startTimer(duration, display) {            //create function to display the duration time
+    var timer = duration, minutes, seconds;         //timer is duration passed thru calulated in mins and secs
+    setInterval(function () {                       //setInterval calls a function to set the specified intervals in milliseconds
+   
+        minutes = parseInt(timer / 60, 10);         //Calulation passes string time and passes to number mins
+        seconds = parseInt(timer % 60, 10);         //Calulation passes string time and passes to number secs
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;  //If number is less than 10 add 0 and remaining minutes
+        seconds = seconds < 10 ? "0" + seconds : seconds;  //If number is less than 10 add 0 and remaining seconds
+
+        display.textContent = minutes + ":" + seconds;     //Display the set mins and secs
+
+        if (--timer < 0) {                         //If timer is less than 0 it is equal to the duration Counter starts again!!
+            timer = duration;
+        }
+    }, 1000);                                      //The secs and mins will change each 1000 1sec
+}
+
+window.onload = function () {                      //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
+    var twoMinutes = 60 * 2,                       //2 mins duration called to run 
+        display = document.querySelector('#time'); //Grab the timeID and show countdown time
+    startTimer(twoMinutes, display);
+};
