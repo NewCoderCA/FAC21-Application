@@ -8,7 +8,7 @@ animation: gradient 4s linear infinite alternate;
 height: 100vh;
 display: flex;
 justify-content: left;
-font-family: Open Sans, sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-size: large;
 writing-mode: horizontal-rl;
 display: block;
@@ -25,7 +25,7 @@ display: block;
 
 h1 {
     color: white;
-    font-family: Open Sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     font-size: 4rem;
     letter-spacing: 1rem;

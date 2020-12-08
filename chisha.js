@@ -109,29 +109,27 @@ startSlide();                                                      //Fire the fu
 //  }
 
 
-//CHECK PAUSE BUTTON
-  //var timer = setInterval(showAllSlides, 4000);
-  // var pauseButton = document.getElementById("pause");          //Grab pause button
-  // let play = true;
+//PAUSE BUTTON FUNCTION
+  var pauseButton = document.getElementById("pause");          //Grab pause button
+  let play = true;
 
-
-  // function stopStart(){
-  //   if (play){
-  //     clearInterval(timer); 
-  //     pauseButton.innerHTML = "Play me";
-  //     play = false; 
+  function stopStart(){
+    if (play){
+      clearInterval(timer); 
+      pauseButton.innerHTML = "Play me";
+      play = false; 
      
-  //   } else {
-  //     play = true;
-  //     timer = setInterval(showAllSlides, 4000);
-  //     pauseButton.innerHTML = "Pause me";
-  //   }
-  // }
-  //  pauseButton.addEventListener("click", function(){
-  //   console.log("Did this work?");
+    } else {
+      play = true;
+      timer = setInterval(showAllSlides, 4000);
+      pauseButton.innerHTML = "Pause me";
+    }
+  }
+   pauseButton.addEventListener("click", function(){
+    console.log("Did this work?");
    
-  // stopStart();
-	// });
+  stopStart();
+	});
 
   
   
@@ -200,14 +198,17 @@ function startTimer(duration, display) {            //create function to display
         }
     }, 1000);                                      //The secs and mins will change each 1000 1sec
 }
+// window.onload = function () {                      //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
+//     var twoMinutes = 60 * 2,                       //2 mins duration called to run 
+//         display = document.querySelector('#time'); //Grab the timeID and show countdown time
+//     startTimer(twoMinutes, display);
+// };
 
-//window.onload = function () {                     //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
-var summaryTab = document.getElementById("summaryTab"); //Grab SummaryTab by ID name
+//REFACTOR Timer Countdown Function on click of summaryTab       //onload ountdown will start as soon as pageSummary is fully loaded within bodytag
+var summaryTab = document.getElementById("summaryTab");         //Grab SummaryTab by ID name
 
-summaryTab.addEventListener("click", function(){  //Added EventListener to click of tab fire function
-  //alert("Did I work");
-  var twoMinutes = 60 * 2,                        //Run 2 mins duration countdown timer 
-  display = document.querySelector('#time');      //Grab the timeID and show countdown time next to word Timer
+summaryTab.addEventListener("click", function(){                //Added EventListener to click of tab fire function
+  var twoMinutes = 60 * 2,                                      //Run 2 mins duration countdown timer 
+  display = document.querySelector('#time');                    //Grab the timeID and show countdown time next to word Timer
 startTimer(twoMinutes, display);
-
 });  
