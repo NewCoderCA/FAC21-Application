@@ -87,48 +87,51 @@ right.addEventListener('click', function(){                        //RIGHT Liste
 startSlide();                                                      //Fire the function startSlide
 
 
-
-
-
 // //PAUSE ON HOVER 
- var i = 0;
-// var timer = setInterval(showAllSlides, 3000);
- var slidesPath = document.getElementById("mySlides");
+//  var i = 0;
+// // var timer = setInterval(showAllSlides, 3000);
+//  var slidesPath = document.getElementById("mySlides");
 
- function pauseSlideOnHover(){
-  document.getElementById("mySlides");
- if (i < slidesPath.length - 1){
-   i++;
- } else {
-  i = 0;
-}
- timer = setTimeout("pauseSlideOnHover()", 3000);
- }
-function stopShow() {
-   clearInterval(timer);
- }
- function runShow(){
-  pauseSlideOnHover();
- }
+//  function pauseSlideOnHover(){
+//   document.getElementById("mySlides");
+//  if (i < slidesPath.length - 1){
+//    i++;
+//  } else {
+//   i = 0;
+// }
+//  timer = setTimeout("pauseSlideOnHover()", 3000);
+//  }
+// function stopShow() {
+//    clearInterval(timer);
+//  }
+//  function runShow(){
+//   pauseSlideOnHover();
+//  }
+
 
 //CHECK PAUSE BUTTON
-//   var timer = setInterval(showAllSlides, 3000);
-//   var pauseButton = document.getElementById("pause");          //Grab pause button
-//   //var playButton = document.getElementsById("play");         //Grab play button
-//   let play = true;
-//   function pause(event){
-//     if (play){
-//       play = false;    
-//     } else {
-//       play = true;
-//     }
-//   }
-//    pauseButton.addEventListener("click", function (){
-//    //pauseButton.innerHTML = "Pause me";
-//    clearInterval(timer);
-// 	pause();
-// 	showAllSlides();
-// 	});
+  //var timer = setInterval(showAllSlides, 4000);
+  // var pauseButton = document.getElementById("pause");          //Grab pause button
+  // let play = true;
+
+
+  // function stopStart(){
+  //   if (play){
+  //     clearInterval(timer); 
+  //     pauseButton.innerHTML = "Play me";
+  //     play = false; 
+     
+  //   } else {
+  //     play = true;
+  //     timer = setInterval(showAllSlides, 4000);
+  //     pauseButton.innerHTML = "Pause me";
+  //   }
+  // }
+  //  pauseButton.addEventListener("click", function(){
+  //   console.log("Did this work?");
+   
+  // stopStart();
+	// });
 
   
   
@@ -198,8 +201,13 @@ function startTimer(duration, display) {            //create function to display
     }, 1000);                                      //The secs and mins will change each 1000 1sec
 }
 
-window.onload = function () {                      //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
-    var twoMinutes = 60 * 2,                       //2 mins duration called to run 
-        display = document.querySelector('#time'); //Grab the timeID and show countdown time
-    startTimer(twoMinutes, display);
-};
+//window.onload = function () {                     //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
+var summaryTab = document.getElementById("summaryTab"); //Grab SummaryTab by ID name
+
+summaryTab.addEventListener("click", function(){  //Added EventListener to click of tab fire function
+  //alert("Did I work");
+  var twoMinutes = 60 * 2,                        //Run 2 mins duration countdown timer 
+  display = document.querySelector('#time');      //Grab the timeID and show countdown time next to word Timer
+startTimer(twoMinutes, display);
+
+});  
