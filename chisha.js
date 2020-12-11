@@ -87,28 +87,6 @@ right.addEventListener('click', function(){                        //RIGHT Liste
 startSlide();                                                      //Fire the function startSlide
 
 
-// //PAUSE ON HOVER 
-//  var i = 0;
-// // var timer = setInterval(showAllSlides, 3000);
-//  var slidesPath = document.getElementById("mySlides");
-
-//  function pauseSlideOnHover(){
-//   document.getElementById("mySlides");
-//  if (i < slidesPath.length - 1){
-//    i++;
-//  } else {
-//   i = 0;
-// }
-//  timer = setTimeout("pauseSlideOnHover()", 3000);
-//  }
-// function stopShow() {
-//    clearInterval(timer);
-//  }
-//  function runShow(){
-//   pauseSlideOnHover();
-//  }
-
-
 //PAUSE BUTTON FUNCTION
   var pauseButton = document.getElementById("pause");          //Grab pause button
   let play = true;
@@ -126,13 +104,28 @@ startSlide();                                                      //Fire the fu
     }
   }
    pauseButton.addEventListener("click", function(){
-    console.log("Did this work?");
-   
   stopStart();
 	});
 
   
-  
+
+ //PAUSE MOUSEOVER FUNCTION - Check???
+// document.getElementById("mySlides").addEventListener("mouseoever", mouseOver);
+// document.getElementById("mySlides").addEventListener("mouseout", mouseOut);
+
+//  function mouseOver(){
+//  stopStart(); 
+//  }
+
+//  function mouseOut(){
+//    if (!play){
+//     play = true;
+//     timer = setInterval(showAllSlides, 4000);
+//    }
+//  }
+
+
+
 
 //Destination Textbox for user input 
 var inputElement = document.getElementById("username");
@@ -179,36 +172,34 @@ count.textContent = input.value.length + ' characters';                  //Count
 }
 
 
-
 //Timer Countdown Function
-function startTimer(duration, display) {            //create function to display the duration time
-    var timer = duration, minutes, seconds;         //timer is duration passed thru calulated in mins and secs
-    setInterval(function () {                       //setInterval calls a function to set the specified intervals in milliseconds
+function startTimer(duration, display) {                                   //create function to display the duration time
+    var timer = duration, minutes, seconds;                                //timer is duration passed thru calulated in mins and secs
+    setInterval(function () {                                              //setInterval calls a function to set the specified intervals in milliseconds
    
-        minutes = parseInt(timer / 60, 10);         //Calulation passes string time and passes to number mins
-        seconds = parseInt(timer % 60, 10);         //Calulation passes string time and passes to number secs
+        minutes = parseInt(timer / 60, 10);                                //Calulation passes string time and passes to number mins
+        seconds = parseInt(timer % 60, 10);                                //Calulation passes string time and passes to number secs
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;  //If number is less than 10 add 0 and remaining minutes
-        seconds = seconds < 10 ? "0" + seconds : seconds;  //If number is less than 10 add 0 and remaining seconds
+        minutes = minutes < 10 ? "0" + minutes : minutes;                  //If number is less than 10 add 0 and remaining minutes
+        seconds = seconds < 10 ? "0" + seconds : seconds;                  //If number is less than 10 add 0 and remaining seconds
 
-        display.textContent = minutes + ":" + seconds;     //Display the set mins and secs
+        display.textContent = minutes + ":" + seconds;                     //Display the set mins and secs
 
-        if (--timer < 0) {                         //If timer is less than 0 it is equal to the duration Counter starts again!!
+        if (--timer < 0) {                                                 //If timer is less than 0 it is equal to the duration Counter starts again!!
             timer = duration;
         }
-    }, 1000);                                      //The secs and mins will change each 1000 1sec
+    }, 1000);                                                              //The secs and mins will change each 1000 1sec
 }
-// window.onload = function () {                      //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
-//     var twoMinutes = 60 * 2,                       //2 mins duration called to run 
-//         display = document.querySelector('#time'); //Grab the timeID and show countdown time
-//     startTimer(twoMinutes, display);
-// };
+window.onload = function () {                                           //onload event timer countdown will start as soon as pageSummary is fully loaded within <body> tag
+    var twoMinutes = 60 * 2,                                            //2 mins duration called to run 
+        display = document.querySelector('#time');                      //Grab the timeID and show countdown time
+    startTimer(twoMinutes, display);
+};
+//REFACTOR Timer Countdown Function on click of summaryTab                 //onload ountdown will start as soon as pageSummary is fully loaded within bodytag
+// var summaryTab = document.getElementById("summaryTab");                    //Grab SummaryTab by ID name
 
-//REFACTOR Timer Countdown Function on click of summaryTab       //onload ountdown will start as soon as pageSummary is fully loaded within bodytag
-var summaryTab = document.getElementById("summaryTab");         //Grab SummaryTab by ID name
-
-summaryTab.addEventListener("click", function(){                //Added EventListener to click of tab fire function
-  var twoMinutes = 60 * 2,                                      //Run 2 mins duration countdown timer 
-  display = document.querySelector('#time');                    //Grab the timeID and show countdown time next to word Timer
-startTimer(twoMinutes, display);
-});  
+// summaryTab.addEventListener("click", function(){                           //Added EventListener to click of tab fire function
+//   var twoMinutes = 60 * 2,                                                 //Run 2 mins duration countdown timer 
+//   display = document.querySelector('#time');                               //Grab the timeID and show countdown time next to word Timer
+// startTimer(twoMinutes, display);
+// });  
