@@ -110,11 +110,12 @@ startSlide();                                                      //Fire the fu
   
 
  //PAUSE MOUSEOVER FUNCTION - Check???
-// document.getElementById("mySlides").addEventListener("mouseoever", mouseOver);
-// document.getElementById("mySlides").addEventListener("mouseout", mouseOut);
+// document.querySelectorAll(".mySlides").addEventListener("mouseover", mouseOver);
+// document.querySelectorAll(".mySlides").addEventListener("mouseout", mouseOut);
 
 //  function mouseOver(){
 //  stopStart(); 
+//  console.log("I work");
 //  }
 
 //  function mouseOut(){
