@@ -20,7 +20,7 @@ tabs.forEach(tab => {                                                 //ForEach 
 
 //Image Carousel Automatic slideshow
 var slideIndex = 0;
-var timer = setInterval(showAllSlides, 4000);                         //Declare variable timer showAllSlides @ 4secs
+var timer = setInterval(showAllSlides, 3000);                         //Declare variable timer showAllSlides @ 4secs
 
 function showAllSlides() {
   var i;
@@ -99,33 +99,35 @@ startSlide();                                                      //Fire the fu
      
     } else {
       play = true;
-      timer = setInterval(showAllSlides, 4000);
-      pauseButton.innerHTML = "Pause me";
+      timer = setInterval(showAllSlides, 3000);
+      pauseButton.innerHTML = "Pause";
     }
   }
-   pauseButton.addEventListener("click", function(){
+  pauseButton.addEventListener("click", function(){
   stopStart();
 	});
 
   
 
- //PAUSE MOUSEOVER FUNCTION - Check???
-// document.querySelectorAll(".mySlides").addEventListener("mouseover", mouseOver);
-// document.querySelectorAll(".mySlides").addEventListener("mouseout", mouseOut);
+ //PAUSE MOUSEOVER - UNPAUSE MOUSEOUT FUNCTION 
+  document.querySelectorAll(".mySlides").forEach(function(element) { 
+  element.addEventListener("mouseover", mouseOver); 
+  });
+  function mouseOver(){
+    stopStart(); 
+    pauseButton.innerHTML = "Paused";
+  }
 
-//  function mouseOver(){
-//  stopStart(); 
-//  console.log("I work");
-//  }
-
-//  function mouseOut(){
-//    if (!play){
-//     play = true;
-//     timer = setInterval(showAllSlides, 4000);
-//    }
-//  }
-
-
+ document.querySelectorAll(".mySlides").forEach(function(element) { 
+ element.addEventListener("mouseout", mouseOut); 
+ });
+ function mouseOut(){
+   if (!play){
+   play = true;
+   timer = setInterval(showAllSlides, 3000);
+   pauseButton.innerHTML = "Pause";
+  }
+ }
 
 
 //Destination Textbox for user input 
