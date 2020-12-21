@@ -12,6 +12,7 @@
 <body>
 
 <!--Creating Navigation Bar to contain the Tabs from unordered list-->
+<nav>
 <div class="navbar">
   <ul class="tabs">
     <li><a data-tab-target="#home" class="active tab">Home</a></li> 
@@ -19,16 +20,15 @@
     <li><a data-tab-target="#summary" class="tab">Summary</a></li> 
   </ul>
 </div>
+</nav>
 
 <!--Tab 1. Tab content includes headers, divs, paragraphs-->
   <div class="tab-content">
     <div id="home" data-tab-content class="active">
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
-      <main>On this is journey to join Founders and Coders, they ask why should you be chosen.
-      <br>
-      <br>
-      <br>
+      <p class="ted">On this is journey to join Founders and Coders, they ask why should you be chosen.</p>
+      
         
       
 <!-- Change text color on mouseover-->     
@@ -52,7 +52,7 @@
     </div>
     </section>
 
-    </main>
+  </p>
   </div>
 </div>
 
@@ -149,6 +149,7 @@
 
 <!-- Tab 3--> 
 <!--Flexbox Column layout-->
+
   <div id="summary" data-tab-content>
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
@@ -160,9 +161,11 @@
     <div><b>Timer </b><span id="time"></span></div>
 </body>
 
+<section>
+<article>
   <div class="columnLayout">
 <!--Column One-->
-        <div class="mainColumn">
+    <div class="mainColumn">
           <h3 style="text-align:center">Feature Comprehend</h3>
           <p style="text-align:center">Github</p>
           <div class="oneImage"> 
@@ -178,8 +181,10 @@
           <br>ተረድአ  teredi’ā <!-- Tigrinya-->
           <br>verstaan <!--Africans--></p>
     </div>
+</article>
 
 <!--Column Two-->
+<article>
     <div class="twoColumn">
           <h3 style="text-align:center">Feature Study</h3>
           <p style="text-align:center">Codewars</p>
@@ -196,9 +201,10 @@
             <br>học <!--Vietnamese language -->
             <br>अध्ययन <!--Nepalese language--></p>
     </div>
-
+</article>
 <!--Column Three-->
-    <div class="threeColumn">
+<article>
+    <!--<div class="threeColumn">-->
           <h3 style="text-align:center">Feature Learn</h3>
           <p style="text-align:center">Freecodecamp</p>
           <div class="threeImage"> 
@@ -213,9 +219,11 @@
             <br>μαθαίνω <!--Greek language -->
             <br>jitgħallmu <!--Maltese language-->
             <br>foghlaim <!--Irish language--></p>
-      </div>
+       <!--</div>Div Close Column Layout-->
    </div> <!--Div Close Summary-->
-  </div>  <!--Div Close Column Layout-->
+ </div> 
+</article>
+</section>
 
 </div>
 </div>

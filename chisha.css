@@ -12,7 +12,14 @@ font-family: 'Open Sans', sans-serif;
 font-size: large;
 writing-mode: horizontal-rl;
 display: block;
+}
 
+main{
+  margin: 2%;
+}
+
+p {
+  text-align: center;
 }
 
 @keyframes gradient {
@@ -240,6 +247,28 @@ body {
 }
 
 
+/*Expanding Divs in 3Columns on Hover 
+.columnLayout{
+    width:20%; 
+    height:100%;
+    float:left; 
+    position:absolute; 
+    -moz-transition:all 0.5s linear
+}
+
+.columnLayout:hover{width:30%; overflow:visible; z-index:1}
+
+.mainColumn{left:30%}
+.twoColumn{left:60%}
+.threeColumn{left:90%}*/
+
+.columnLayout {
+  flex-grow: 2;
+}
+
+  
+
+
 @media (min-width: 700px) { /* if using mobile/ small screen keeps as x3columns */
 #changeText {
 display-flex;
@@ -281,7 +310,7 @@ justify-content: space-between;
   border-radius: 50px;
  }
 
-.oneImage:hover, .twoImage:hover, .threeImage {
+.oneImage:hover, .twoImage:hover, .threeImage:hover {
   opacity: 0.7;
 }
  
@@ -306,3 +335,30 @@ justify-content: space-between;
     transform: scale(1);
   }
 }
+
+
+
+section {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:flex;
+	}
+article {
+	height: 300px;
+	-webkit-flex:1;
+	-moz-flex:1;
+	-ms-flex:1;
+	flex:1;
+	border:1px solid transparent;
+	-webkit-transition:1s all;
+	-moz-transition:1s all;
+	-ms-transition:1s all;
+	transition:1s all;
+	}
+article:hover {
+	-webkit-flex:2;
+	-moz-flex:2;
+	-ms-flex:2;
+	flex:2;
+	}

@@ -206,3 +206,33 @@ window.onload = function () {                                           //onload
 //   display = document.querySelector('#time');                               //Grab the timeID and show countdown time next to word Timer
 // startTimer(twoMinutes, display);
 // });  
+
+
+
+
+// //INSERT HOURGLASS TIMER 
+//
+// <style>
+// #div1 { font-size:22px; } //CSS Style size of hourglass 
+// </style>
+// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+// <body>
+// <div id="sandtimer" class="fa"></div> //Name hourglass by a name
+
+// <script>
+// function hourglass() {
+//   var hourG;
+//   hourG = document.getElementById("sandtimer");
+//   hourG.innerHTML = "&#xf251;";
+//   setTimeout(function () {
+//       hourG.innerHTML = "&#xf252;";
+//     }, 1000);
+//   setTimeout(function () {
+//       hourG.innerHTML = "&#xf253;";
+//     }, 2000);
+// }
+// hourglass();
+// setInterval(hourglass, 2000);
+
+// </script>
+// </body>
