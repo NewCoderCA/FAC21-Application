@@ -30,7 +30,8 @@ h1 {
     font-size: 4rem;
     letter-spacing: 1rem;
     text-align: center;
-    
+    margin-top: 8%; 
+    margin-bottom: 0%  
 }
 
 h2 {
@@ -56,8 +57,7 @@ main { margin: 3%;} /* margin space top-right-bottom-left around each page */
 p {text-align: center;}
 
 /* Navigation Bar */
-body {margin:0;}
-
+/*body {margin:0;} */
 .navbar {
   overflow: hidden;
   background-color: #FBDA61;
@@ -254,7 +254,7 @@ body {
 
 @media (min-width: 700px) { /* if using mobile/ small screen keeps as x3columns */
 #changeText {
-display-flex;
+display: flex;
 justify-content: space-between;
  }
 }

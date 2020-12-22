@@ -162,7 +162,7 @@ function changeCorrectColor(event) {                                     //Liste
    event.target.classList.toggle("blue");                                //Toggle over button color change to blue
     } 
    } 
-colorBtnChangeA.addEventListener("click", changeCorrectColor);           //Button addEvenListen out for 'click' to fire above function
+colorBtnChangeA.addEventListener("click", changeCorrectColor);           //Button addEventListen out for 'click' to fire above function
 
 
 //Count letters for longest spelling destination 
@@ -211,14 +211,13 @@ window.onload = function () {                                           //onload
 
 
 // //INSERT HOURGLASS TIMER 
-//
+
 // <style>
 // #div1 { font-size:22px; } //CSS Style size of hourglass 
 // </style>
 // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 // <body>
 // <div id="sandtimer" class="fa"></div> //Name hourglass by a name
-
 // <script>
 // function hourglass() {
 //   var hourG;
@@ -233,6 +232,3 @@ window.onload = function () {                                           //onload
 // }
 // hourglass();
 // setInterval(hourglass, 2000);
-
-// </script>
-// </body>
