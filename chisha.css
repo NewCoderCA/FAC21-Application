@@ -43,7 +43,7 @@ h2 {
 
 h3 {
   text-align: center;
-  font-weight: 200;
+  font-weight: bold;
 }
 
 h4 {
@@ -51,7 +51,7 @@ h4 {
   font-weight: 180;
 }
 
-main { margin: 5%;}
+main { margin: 3%;} /* margin space top-right-bottom-left around each page */
 
 p {text-align: center;}
 
@@ -83,10 +83,6 @@ body {margin:0;}
   color: black;
 }
 
-/*.main {
-  padding: 16px;
-  margin-top: 30px;
-} */
 
 /* TABS */
 [data-tab-content] {
@@ -100,7 +96,6 @@ body {margin:0;}
 body {                  
   padding: 1px;
   margin: 0;
-  
 }
 
 .tabs {
@@ -225,7 +220,6 @@ body {
   border-radius: 50px;
 }
 
-
 /*Targets divclass columnLayout outside container using flexbox to make columns across screen*/
 .columnLayout {
   display: flex; /* Flexbox style to center text */ 
@@ -310,7 +304,7 @@ justify-content: space-between;
  }
 
 
- #bulge {
+#bulge {
   animation: bulge 3s infinite;
 }
 @keyframes bulge {

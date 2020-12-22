@@ -58,26 +58,21 @@
     <label for="country">Insert your longest spelling destination.</label>
     <input type="text" id="longestCountry">
     <output id="character-count">0 characters</output>
-<!--  ::after --> 
   </div>   
         
  <p>Holidays are all about rest, relaxation and indulging in pure bliss. So while you are here, join in and participate. That rejuvenated mood afterwards may allow you to return! Perhaps you can guess which countries these beautiful beaches belong to.</p>
 <!--Destination textbox for user input-->
     <div class="changeTextbox">
       <section id="changeText">
-         <label for="username">Match the correct destination: 
-          <input type="text" id="username" value="country"/> </label>
-      </section>
+         <label for="username">Match the correct destination: <input type="text" id="username" value="country"/> 
+<!-- Blue button answer correct -->
+      <button id="blueButton"> Congratulations correct!</button></label>
+        </section>
     </div>
 
-<!-- Blue button answer correct -->
-    <section id = "correctButtonColor">
-      <button id="blueButton"> Congratulations correct!</button>
-      <p> Click me <b>once </b>to see if you guessed the country or destination correctly. If you are correct, I will change to the sea colour for you. Then <b>click me one more time</b> to clear and have another try. See if you can guess them all right. But do not forget its case sensitive!</p>
-      </section>
-    </section> 
+<p> Click me <b>once </b>to see if you guessed the country or destination correctly. If you are correct, I will change to the sea colour for you. Then <b>click me one more time</b> to clear and have another try. See if you can guess them all right. But do not forget its case sensitive!</p>
  
-<div class="div1"></div> <!--Ensures image carousel appears on Tab 2 only-->
+<div class="div1"></div> <!--CHECK?? Ensures image carousel appears on Tab 2 only-->
               
 <!--Creating image carousel container. Slideshow Container-->       
 <div class="slideshow-container">
@@ -122,7 +117,6 @@
 <!-- Pause button -->
 <button class="controls" id="pause">Pause</button>
 
-
 <!-- Next and previous buttons -->
 <div class="slideControls">
   <button id="prev">
@@ -131,16 +125,13 @@
   <button id="next">
     <i class="fas fa-chevron-right"></i>
     </button>   
- </div>  
+ </div> 
+</div> <!--Slide-show container close-->
+</div> <!--Close to keep slideshow on tab2-->
 
-
-
-</div>
-</div> 
 
 <!-- Tab 3--> 
 <!--Flexbox Column layout-->
-
 <div id="summary" data-tab-content>
       <h1>CHISHA</h1>
       <h2>Welcome  Enjoy  Stay  Return</h2>
@@ -157,15 +148,14 @@
 <!--Column One-->
 <section>
 <article>
-    <!--<div class="mainColumn">-->
-    <h3 style="text-align:center">Feature Comprehend</h3>
-    <p style="text-align:center">Github</p>
+    <h3>Feature Comprehend</h3>
+    <p>Github</p>
     <div class="oneImage"> 
     <a href="https://github.com/NewCoderCA/FAC21-Application"><img id="myGithub" src="https://res.cloudinary.com/practicaldev/image/fetch/s--i_sb3chq--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/fk0849hvg2rt13bpqhjy.jpg" alt="github logo"></a>
     </div>
     
-    <p style="text-align:center">Comprehend means to understand, to grasp, makes sense of, or work out.</p>
-    <p style="text-align:center">ịghọta </p> <!--Igbo language-->
+    <p>Comprehend means to understand, to grasp, makes sense of, or work out.</p>
+    <p>ịghọta </p> <!--Igbo language-->
     <p>fahmid</p><!--Somali language -->
     <p>loye </p><!--Yoruba language -->
     <p>fahimta</p> <!-- Hausa language -->
@@ -173,20 +163,18 @@
     <p>qonda</p> <!-- Zulu language -->
     <p>ተረድአ  teredi’ā </p><!-- Tigrinya-->
     <p>verstaan <!--Africans--></p>
-    <!--</div>-->
 </article>
 
 <!--Column Two-->
 <article>
-  <!--<div class="twoColumn">-->
-    <h3 style="text-align:center">Feature Study</h3>
-    <p style="text-align:center">Codewars</p>
+    <h3>Feature Study</h3>
+    <p>Codewars</p>
     <div class="twoImage"> 
-    <a href="https://www.codewars.com/dashboard"><img id="myCodewars" src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" alt="codewars logo"></a>
+    <a href="https://www.codewars.com/users/Newmember/stats"><img id="myCodewars" src="https://pathrise-website-guide-wp.s3.us-west-1.amazonaws.com/guides/wp-content/uploads/2019/06/10173017/codewars-logo-1.png" alt="codewars logo"></a>
     </div>
           
-    <p style="text-align:center">Study means the devotion of time and attention to gaining knowledge of an academic subject, especially by means of books.</p>
-    <p style="text-align:center">研究 </p><!--Chinese language-->
+    <p>Study means the devotion of time and attention to gaining knowledge of an academic subject, especially by means of books.</p>
+    <p>研究 </p><!--Chinese language-->
     <p>ਅਧਿਐਨ </p><!--Punjabi language -->
     <p>ศึกษา </p><!--Thai language -->
     <p>судлах </p><!--Mongolian language -->
@@ -199,23 +187,21 @@
 
 <!--Column Three-->
 <article>
-  <!--<div class="threeColumn">-->
-    <h3 style="text-align:center">Feature Learn</h3>
-    <p style="text-align:center">Freecodecamp</p>
+    <h3>Feature Learn</h3>
+    <p>Freecodecamp</p>
     <div class="threeImage"> 
     <a href="https://www.freecodecamp.org/learn/?messages=success%5B0%5D%3DSuccess%2521%2520You%2520have%2520signed%2520in%2520to%2520your%2520account.%2520Happy%2520Coding%2521"><img id="myFreecodecamp" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="freecodecamp logo"></a>
     </div>
 
-    <p style="text-align:center">Learn means to gain or acquire knowledge of or skill in something by study, experience, or being taught.</p>
-    <p style="text-align:center">dysgu </p><!--Welsh language-->
+    <p>Learn means to gain or acquire knowledge of or skill in something by study, experience, or being taught.</p>
+    <p>dysgu </p><!--Welsh language-->
     <p>învăța </p><!--Romanian language -->
     <p>naučiti </p><!--Croatian language -->
     <p>mokytis </p><!--Lithuanian language -->
     <p>öğrenmek </p><!--Turkish language -->
     <p>μαθαίνω </p><!--Greek language -->
     <p>jitgħallmu </p><!--Maltese language-->
-    <p>foghlaim </p><!--Irish language-->
-       <!--</div>Div Close Column Layout-->
+    <p>foghlaim </p><!--Irish language-->     
    </div> <!--Div Close Summary-->
  </div> 
 </article>
