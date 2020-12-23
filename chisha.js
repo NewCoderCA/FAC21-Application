@@ -158,11 +158,21 @@ var names = ["Bora Bora", "Aruba", "Cuba", "Varadero", "Mexico", "Cape Verde", "
             "Gambia", "Thailand", "Koh Samui", "Tahiti", "Saint Lucia", "St Lucia"];
 
 function changeCorrectColor(event) {                                     //Listen for the event-actions-to-fire in addEventListener
-   if (names.indexOf(correctText.value) != -1) {                         //If value in correctText IS (opposite of -1 not there) in NAMES then do something...
+   if (names.indexOf(correctText.value) != -1) {                         //If value in correctText IS NOT NOT THERE (opposite of -1 not there) in NAMES then do something...
    event.target.classList.toggle("blue");                                //Toggle over button color change to blue
-    } 
+   colorBtnChangeA.innerHTML = "Congratulations correct!";  
+  } 
    } 
 colorBtnChangeA.addEventListener("click", changeCorrectColor);           //Button addEventListen out for 'click' to fire above function
+
+function changeWrongColor(event){                                        //Function if answer wrong, pass an event
+  if (names.indexOf(correctText.value) === -1) {                         //If indexOf names IS not there-True
+  event.target.classList.toggle("red");                                  //Toggle innerHTML change to red
+  colorBtnChangeA.innerHTML = "Try again";                               //Change innerHTML to try again
+ } 
+}
+colorBtnChangeA.addEventListener("click", changeWrongColor);
+
 
 
 //Count letters for longest spelling destination 
@@ -209,7 +219,7 @@ window.onload = function () {                                           //onload
 
 
 //INSERT HOURGLASS TIMER 
-function hourglass() {
+function hourglass() {                
   var hourG;
   hourG = document.getElementById("sandtimer");
   hourG.innerHTML = "&#xf251;";
@@ -222,29 +232,3 @@ function hourglass() {
 }
 hourglass();
 setInterval(hourglass, 3000);
-
-
-
-
-// //INSERT HOURGLASS TIMER 
-
-// <style>
-// #div1 { font-size:22px; } //CSS Style size of hourglass 
-// </style>
-// <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-// <body>
-// <div id="sandtimer" class="fa"></div> //Name hourglass by a name
-// <script>
-// function hourglass() {
-//   var hourG;
-//   hourG = document.getElementById("sandtimer");
-//   hourG.innerHTML = "&#xf251;";
-//   setTimeout(function () {
-//       hourG.innerHTML = "&#xf252;";
-//     }, 1000);
-//   setTimeout(function () {
-//       hourG.innerHTML = "&#xf253;";
-//     }, 2000);
-// }
-// hourglass();
-// setInterval(hourglass, 2000);

@@ -219,6 +219,11 @@ body {
   border-radius: 50px;
 }
 
+/*Blue Button - changes color RED if answer incorrect */
+.red{
+  background: red; 
+  border-radius: 50px;
+}
 
 /*Textbox - input text element can grow*/
 #changeText input { /* unlimited text space for text to grow and fill box */
@@ -274,8 +279,8 @@ justify-content: space-between;
 
 /* Column Images */
 .oneImage img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -285,8 +290,8 @@ justify-content: space-between;
  }
 
  .twoImage img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -296,8 +301,8 @@ justify-content: space-between;
  }
 
  .threeImage img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -341,4 +346,6 @@ article:hover {
 	-moz-flex:2.5;
 	-ms-flex:2.5;
 	flex:2.5;
-	}
+  }
+  
+ 
