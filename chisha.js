@@ -208,6 +208,22 @@ window.onload = function () {                                           //onload
 // });  
 
 
+//INSERT HOURGLASS TIMER 
+function hourglass() {
+  var hourG;
+  hourG = document.getElementById("sandtimer");
+  hourG.innerHTML = "&#xf251;";
+  setTimeout(function () {
+      hourG.innerHTML = "&#xf252;";
+    }, 1000);
+  setTimeout(function () {
+      hourG.innerHTML = "&#xf253;";
+    }, 2000);
+}
+hourglass();
+setInterval(hourglass, 3000);
+
+
 
 
 // //INSERT HOURGLASS TIMER 

@@ -127,6 +127,20 @@ body {
   padding: none;
 }
 
+#bulge {
+  animation: bulge 3s infinite;
+}
+@keyframes bulge {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /*IMAGE CAROUSEL Slideshow container */
 .slideshow-container {
@@ -193,7 +207,7 @@ body {
   color: white;
 } 
 
-/* On smaller screens, decrease text size */
+/* On mobile screens, decrease size of prev/next buttons*/
 @media only screen and (max-width: 300px) {
   #prev, #next {font-size: 11px}
 }
@@ -251,7 +265,6 @@ body {
 }
 
 
-
 @media (min-width: 700px) { /* if using mobile/ small screen keeps as x3columns */
 #changeText {
 display: flex;
@@ -297,28 +310,13 @@ justify-content: space-between;
   opacity: 0.7;
 }
  
- @media screen and (max-width: 350px){
-   #mySlides {
-     width: 100%;
-   }
- }
-
-
-#bulge {
-  animation: bulge 3s infinite;
-}
-@keyframes bulge {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
+@media screen and (max-width: 350px){
+  #mySlides {
+    width: 100%;
   }
 }
 
+#sandtimer { font-size:22px; } 
 
 section {
 	display:-webkit-flex;
