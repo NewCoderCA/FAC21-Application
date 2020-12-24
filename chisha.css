@@ -142,11 +142,13 @@ body {
   }
 }
 
-.femaleCoder {
+.femaleCoder, .femaleCoderTwo {
  max-width: 250vw;
  max-height: 250vh;
  text-align: center;
 }
+
+
 
 /*IMAGE CAROUSEL Slideshow container */
 .slideshow-container {
