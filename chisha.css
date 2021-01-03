@@ -156,7 +156,7 @@ body {
   opacity: 0.3;
   position: absolute;
   white-space: nowrap; /*words not on single line */
-  animation: floatText 10s linear alternate infinite ;
+  animation: floatText 12s linear alternate infinite ;
  
 }
 @-webkit-keyframes floatText{
@@ -176,7 +176,7 @@ body {
   opacity: 0.3;
   position: absolute;
   white-space: nowrap; /*words not on single line */
-  animation: floatTextt 10s linear infinite alternate;
+  animation: floatTextt 12s linear infinite alternate;
 }
 @-webkit-keyframes floatTextt{
   from {
@@ -194,8 +194,8 @@ body {
 /*IMAGE CAROUSEL Slideshow container */
 .slideshow-container {
   width: auto;
-  max-width: 600px;
-  max-height: 250px;
+  max-width: 500px;
+  max-height: 300px;
   position: relative;
   margin: 0 auto;
   border: solid 3px white;
@@ -364,7 +364,7 @@ justify-content: space-between;
   opacity: 0.7;
 }
  
-@media screen and (max-width: 350px){
+@media screen and (max-width: 300px){
   #mySlides {
     width: 100%;
   }
@@ -373,7 +373,7 @@ justify-content: space-between;
 #sandtimer { font-size:22px; } 
 /*@media screen and (max-width: 300px){
   #sandtimer{
-    font-size: 0.5rem;}/*em and rem for text and % for images */ 
+    font-size: 50%;}/*em and rem for text and % for images */ 
 
 section {
 	display:-webkit-flex;
@@ -400,18 +400,28 @@ article:hover {
 	flex:2.5;
   }
   
+  /*.iframeContainer{
+  position: relative;
+  left: 400px;
+  } */
 
-/*.iframeContainer{
+.iframeContainer{
     position:relative;
-    width: 100%;
-    padding-bottom: 50%;
+    padding-top: 25px;
+    padding-bottom: 35%;
     height:0;
+    /*display: flex;
+    justify-content: center;*/
+    max-width: 650px;
+    max-height: 350px;
 }
 .iframeContainer iframe{
     position:absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     width: 100%;
     height: 100%;
-}*/
+}
  
