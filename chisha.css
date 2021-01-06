@@ -260,7 +260,6 @@ body {
   #prev, #next {font-size: 11px}
 }
 
-
 /*Blue Button - changes color if answer correct */
 .blue{
   background: #00FFFF; 
@@ -398,16 +397,20 @@ article:hover {
 	flex:2.5;
   }
   
-.blackstreet, .blackstreetControls {
-  max-width: 700px;
-  max-height: 350px;
+.blackstreet{
+  display: absolute;
+  text-align: center;
+  margin: 5px;
+  padding: 0% 10% 0% 10%;
+ }
+ .blackstreetControls{
   display: flex;
   justify-content: center;
-  margin: 5px;
  }
  @media screen and (max-width: 300px){
   .blackstreet, .blackstreetControls {
-    width: 25%;
+   display: center;
+   width: 50%;
   }
 }
  
@@ -429,16 +432,17 @@ article:hover {
   }
 }
 
-.rotateWords {
+.translateWords {
   font-size: 2.5rem;
   color: white;
   letter-spacing: 0.1rem;
+  display: inline;
 }
 span:before {
-  content: 'Words';
-  animation: animate infinite ease-in-out 20s;
+  content: '';
+  animation: topToBottom 12s linear infinite;
 }
-@keyframes animate {
+@keyframes topToBottom {
    0% {
      content: 'Comprehend';
    }
@@ -449,10 +453,19 @@ span:before {
     content: 'Learn';
    }
    75% {
-    content: 'Promotes Diversity';
+    content:'Promotes Diversity';
   }
    100% {
-    content: 'Before timer ends';
+    content:'Before Timer Ends';
   }
 }
+ /* .translateWords span{
+    animation: topToBottom 12.5s linear infinite 0s;
+  -ms-animation: topToBottom 12.5s linear infinite 0s;
+	-webkit-animation: topToBottom 12.5s linear infinite 0s;
+	color: white;
+	overflow: hidden;
+	position: absolute;
+}*/
+
 
