@@ -290,6 +290,7 @@ body {
 .columnLayout {
   display: flex; /* Flexbox style to center text */ 
 }
+
 /* Flexbox style to ensure all columns are same width size as siblings*/
 .mainColumn {
   flex: 1;
@@ -297,21 +298,18 @@ body {
   border: solid transparent;
   margin: 15px;
 }
-
 .twoColumn {
   flex: 1;
   flex-basis: 30%;
   border: solid transparent;
   margin: 15px;
 }
-
 .threeColumn {
   flex: 1;
   flex-basis: 30%;
   border: solid transparent;
   margin: 15px;
 }
-
 .columnLayout {
   flex-grow: 2;
 }
@@ -323,7 +321,6 @@ justify-content: space-between;
  }
 }
 
- 
 @media screen and (max-width: 300px){
   #mySlides {
     width: 100%;
@@ -331,9 +328,6 @@ justify-content: space-between;
 }
 
 #sandtimer { font-size:22px; } 
-/*@media screen and (max-width: 300px){
-  #sandtimer{
-    font-size: 50%;}/*em and rem for text and % for images */ 
 
 section {
 	display:-webkit-flex;
@@ -369,8 +363,9 @@ article:hover {
  .blackstreetControls{
   display: flex;
   justify-content: center;
+  margin: 15px;
  }
- @media screen and (max-width: 300px){
+ @media screen and (max-width: 250px){
   .blackstreet, .blackstreetControls {
    display: center;
    width: 50%;
@@ -391,7 +386,7 @@ article:hover {
 }
 @media screen and (max-width: 300px){
   .return, .returnTwo {
-  font-size: 25%;
+  font-size: 50%;
   }
 }
 
@@ -399,34 +394,27 @@ article:hover {
 .column {
   float: left;
   width: 33.33%;
-  padding: 50px;
+  padding: 5px;
   max-width: 150px;
   max-height: 150px;
-  border-radius: 80px;
-  
 }
 .column img{
-  border-radius: 80%;
+  border-radius: 50%;
   align-items: center;
   text-align: center;
   justify-content: space-around;
 }
-.column img:hover {
-  opacity: 0.5;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-
-.row::after { /* clear floats */
-content: '';
-clear: both;
-display: table;
+/* Responsive layout - makes the three icons stack next to each other instead of on top*/
+@media screen and (max-width: 300px) {
+  .row {
+    width: 100%;
+  }
 }
-@media screen and (max-width: 300px){
-  .column {
-    display: center;
-    width: 50%;
-   }
-}
-
 
 .translateWords {
   font-size: 2.5rem;
@@ -449,14 +437,7 @@ span:before {
     content: 'Learn';
    }
 }
- /* .translateWords span{
-    animation: topToBottom 12.5s linear infinite 0s;
-  -ms-animation: topToBottom 12.5s linear infinite 0s;
-	-webkit-animation: topToBottom 12.5s linear infinite 0s;
-	color: white;
-	overflow: hidden;
-	position: absolute;
-}*/
+
 
 
   
