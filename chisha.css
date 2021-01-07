@@ -323,43 +323,6 @@ justify-content: space-between;
  }
 }
 
-/* Column Images */
-.oneImage img {
-  width: 125px;
-  height: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  margin: auto;
-  border-radius: 50px;
- }
-
- .twoImage img {
-  width: 125px;
-  height: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  margin: auto;
-  border-radius: 50px;
- }
-
- .threeImage img {
-  width: 125px;
-  height: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  margin: auto;
-  border-radius: 50px;
- }
-
-.oneImage:hover, .twoImage:hover, .threeImage:hover {
-  opacity: 0.7;
-}
  
 @media screen and (max-width: 300px){
   #mySlides {
@@ -432,6 +395,39 @@ article:hover {
   }
 }
 
+/* Icons images */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 80px;
+  
+}
+.column img{
+  border-radius: 80%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+.column img:hover {
+  opacity: 0.5;
+}
+
+.row::after { /* clear floats */
+content: '';
+clear: both;
+display: table;
+}
+@media screen and (max-width: 300px){
+  .column {
+    display: center;
+    width: 50%;
+   }
+}
+
+
 .translateWords {
   font-size: 2.5rem;
   color: white;
@@ -446,18 +442,12 @@ span:before {
    0% {
      content: 'Comprehend';
    }
-   25% {
+   50% {
     content: 'Study';
    }
-   50% {
+   100% {
     content: 'Learn';
    }
-   75% {
-    content:'Promotes Diversity';
-  }
-   100% {
-    content:'Before Timer Ends';
-  }
 }
  /* .translateWords span{
     animation: topToBottom 12.5s linear infinite 0s;
@@ -469,3 +459,4 @@ span:before {
 }*/
 
 
+  
