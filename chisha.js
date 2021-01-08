@@ -174,6 +174,26 @@ function changeWrongColor(event){                                        //Funct
 colorBtnChangeA.addEventListener("click", changeWrongColor);
 
 
+//Translate continent if correct order
+ var correctTranslate = document.getElementById("usernameT"); 
+ var buttonTranslate = document.getElementById("blueButtonT");
+ var word = ["Africa Asia Europe", "africa asia europe"];
+ function correctContinent(event) {                                  
+   if (word.indexOf(correctTranslate.value) != -1) {                         
+   event.target.classList.toggle("blue");                                
+   buttonTranslate.innerHTML = "Congratulations correct!";  
+   } 
+ } 
+ buttonTranslate.addEventListener("click", correctContinent); 
+//Translate continent if NOT correct order
+function wrongContinent(event){                                        
+   if (word.indexOf(correctTranslate.value) === -1) {                         
+   event.target.classList.toggle("red");                                  
+   buttonTranslate.innerHTML = "Try again";                              
+  } 
+ }
+ buttonTranslate.addEventListener("click", wrongContinent);
+
 
 //Count letters for longest spelling destination 
 const input = document.getElementById("longestCountry");                 //Grab textbox     
